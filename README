@@ -1,0 +1,7 @@
+This is a bare-bones webapp that I wrote in 2007 to help build out a Google widget for my Google homepage.  I wanted the widget to display one vim command per day (in the hopes that such "commands of the day" could help me become more of a power user.)  The code is intended to interact with a mysql database on my webserver; I've x'ed out the connectivity info (and ideally would relocate it to a config file.)
+
+Initially the script was viewable at http://leonid.there.ath.cx/~demew/sandbox/python but since I have not had access to that machine in a few years you'll encounter errors when trying to load it.  I haven't loaded it yet on my new webserver (in particular because I need to create the data that I'm interested in).
+
+It's a mod_python-driven webapp, rendering python directly into the browser, starting with file index.py and working in close coordination with vim_command_grabber.py.  vim_gadget_maniuplator.py can sometimes be involved in this work (if the dates affiliated with commands are stale, for instance) but it also serves as a command line utility for adding more commands to the database.
+
+It's not the most attractive little application but it was a nice exercise in getting the most bare-bones of webapps running.
